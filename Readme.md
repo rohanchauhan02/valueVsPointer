@@ -103,7 +103,7 @@ ok      github.com/rohanchauhan02/valuevspointer        3.421s
 Without optimization, pass by value is significantly slower because it has to copy the entire 256KB structure. Pass by reference only copies a memory address, which is much faster.
 
 <!-- Add image here -->
-![Benchmark results](https://github.com/rohanchauhan02/valuevspointer/doc/img1.png)
+![Benchmark results](https://github.com/rohanchauhan02/valueVsPointer/blob/main/doc/img1.png)
 
 ## Assembly code without optimization
 
@@ -418,11 +418,10 @@ gclocals·wgcWObbY2HYnK2SU/U22lA== SRODATA dupok size=10
 gclocals·J5F+7Qw7O7ve2QcWC7DpeQ== SRODATA dupok size=8
         0x0000 02 00 00 00 00 00 00 00                          ........
 main.PassByPointer.arginfo1 SRODATA static dupok size=3
-        0x0000 00 08 ff
-
+        0x0000 00 08 ff                                         ...
 ```
 
-![Assembly code](https://github.com/rohanchauhan02/valuevspointer/doc/img2.png)
+![Assembly code](https://github.com/rohanchauhan02/valueVsPointer/blob/main/doc/img2.png)
 
 ### Conclusion
 
