@@ -421,8 +421,10 @@ main.PassByPointer.arginfo1 SRODATA static dupok size=3
         0x0000 00 08 ff                                         ...
 ```
 
-
 ![Assembly code](https://github.com/rohanchauhan02/valueVsPointer/blob/main/doc/img2.png)
+
+- More Steps in Pass by Value: The extra steps in pass by value are due to the need to copy data, allocate memory, and perform more instructions to handle the value as opposed to a reference.
+- Efficiency: Pass by reference is generally more efficient in terms of memory usage and speed, especially for larger data structures, because it avoids the overhead of copying the entire dataset.
 
 ### Conclusion
 
