@@ -102,7 +102,6 @@ ok      github.com/rohanchauhan02/valuevspointer        3.421s
 
 Without optimization, pass by value is significantly slower because it has to copy the entire 256KB structure. Pass by reference only copies a memory address, which is much faster.
 
-<!-- Add image here -->
 ![Benchmark results](https://github.com/rohanchauhan02/valueVsPointer/blob/main/doc/img1.png)
 
 ## Assembly code without optimization
@@ -111,6 +110,7 @@ Without optimization, pass by value is significantly slower because it has to co
 go tool compile -N -S -l main.go
 ```
 
+```
 main.main STEXT size=144 args=0x0 locals=0x80008 funcid=0x0 align=0x0
         0x0000 00000 (/Users/rohanchauhan/Learning/golang/valueVsPointer/main.go:7)     TEXT    main.main(SB), ABIInternal, $524304-0
         0x0000 00000 (/Users/rohanchauhan/Learning/golang/valueVsPointer/main.go:7)     MOVD    16(g), R16
@@ -420,6 +420,7 @@ gclocals·J5F+7Qw7O7ve2QcWC7DpeQ== SRODATA dupok size=8
 main.PassByPointer.arginfo1 SRODATA static dupok size=3
         0x0000 00 08 ff                                         ...
 ```
+
 
 ![Assembly code](https://github.com/rohanchauhan02/valueVsPointer/blob/main/doc/img2.png)
 
